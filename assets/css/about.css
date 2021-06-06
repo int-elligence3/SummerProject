@@ -224,6 +224,10 @@ svg {
     size: 50px;
 }
 
+.icon1:hover, .icon2:hover{
+    opacity: .5;
+}
+
 @keyframes drop {
     0% {
         transform: translateY(80%); 

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Team Page | NoteBoat</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	 <link rel="shortcut icon" href="images/favicon1-removebg.png" type="image/x-icon">
+	 <link rel="stylesheet" href="css/teampage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" >
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Neuton:wght@700&display=swap" rel="stylesheet">
+
+
+	<style type="text/css">
+		.our-team{
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.our-team img{
+    width: 100%;
+    height: auto;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+/*ZOOM OUT IMG*/
+.our-team:hover img{ transform: scale(1.2); }
+
+/*social BUTTONS*/
+.our-team:hover{
+    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.our-team .pic{
+    overflow: hidden;
+    position: relative;
+}
+.our-team .pic:before,
+.our-team .pic:after{
+    content: "";
+    width: 200%;
+    height: 80%;
+    background: rgba(38,37,37,0.8);
+    position: absolute;
+    top: -100%;
+    left: -4%;
+    transform: rotate(45deg);
+    transition: all 0.5s ease 0s;
+}
+.our-team .pic:after{
+    background: rgba(8,75,77,0.8);
+    top: auto;
+    left: auto;
+    bottom: -100%;
+    right: -4%;
+}
+.our-team:hover .pic:before{ top: 0; }
+.our-team:hover .pic:after{ bottom: 0; }
+.our-team .pic img{
+    width: 100%;
+    height: auto;
+}
+.our-team .social{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    bottom: 0px/*45%*/;
+    left: 0;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.5s ease 0.3s;
+}
+.our-team:hover .social{ opacity: 1; }
+.our-team .social li{ display: inline-block; }
+.our-team .social li a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    color: #fff;
+    margin-right: 10px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+.our-team .social li a:after{
+	z-index: -1;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #db162f;
+    border-radius: 0 20px 20px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    /*transition: all 0.3s ease 0s;*/
+}
+.our-team .social li a:hover:after{ transform: rotate(180deg); }
+
+/*REST*/
+.our-team:hover .team-content{
+    width: 100%;
+    padding: 15px 10px;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/*.our-team .pic .post:before{display: none;}*/
+.our-team:hover .title{
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 0 0 5px 0;
+}
+.our-team:hover .post{
+    display: block;
+    font-size: 20px;
+    color: #0facf3;
+}
+
+.our-team:hover .title:after .post: after{
+	z-index: -1;
+}
+
+@media only screen and (max-width: 990px){
+    .our-team{ margin-bottom: 30px; }
+}
+
+.social li{
+	font-size: 10px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	/*height: ;*/
+}
+a: hover{
+	text-decoration: none;
+}
+
+.team-content{
+	font-size: 25px;
+	padding-top: -10px;
+}
+
+	</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top pr-0 py-0" >
+        <!-- <a class="navbar-brand" href="#">BookNotes</a> -->
+        <a href="../index.html"><img src="images/text4.png"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent" style="color:white;">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" style="color:white;">  ABOUT US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" >      </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="teampage.html" style="color:white;">  OUR TEAM   </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" >      </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html" style="color:white;">CONTACT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" >      </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#" >      </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <!-- OUR Team -->
+    <div class ="container" style="color: black">
+    	<div class="row d-flex justify-content-center">
+    		<div class="col-sm-12">
+    			<p style="text-align: center; justify-content: center; display: flex;"> OUR TEAM </p>
+    		</div>
+    	</div>
+    </div>
+
+    <div class ="container" style="color: black; margin-top: 50px;">
+    	<div class="row d-flex justify-content-center">
+    		<div class="col">
+    			<p style="text-align: center; justify-content: center; display: flex; font-family: 'Luckiest Guy', cursive; font-size: 60px;"> MEET OUR TEAM! </p>
+    		</div>
+    	</div>
+    </div>
+
+    <!-- <FACULTY -->
+
+
+<div class ="container" style="color: black; margin-top: 50px;">
+        <div class="row d-flex justify-content-center">
+            <div class="col">
+                <p style="text-align: center; justify-content: center; display: flex; font-family: 'Luckiest Guy', cursive; font-size: 40px;"> FACULTY INCHARGE </p>
+            </div>
+        </div>
+    </div>
+
+	<div class="container" style = "padding-top: 0px; font-family: 'Neuton', serif;">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-3 col-sm-4">
+            <div class="our-team">
+                <img src="images/williamson.jpg" alt="">
+                <ul class="social" style = "text-decoration: none; text">
+                    <!-- <li><a href="#" class="fa fa-facebook"></a></li> -->
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#" class="fa fa-github"></a></li>
+                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                    <p> </p>
+                    <!-- <li><a href="#" class="fa fa-twitter"></a></li> -->
+                </ul>
+                <div class="team-content">
+                    <h3 class="title">Surender Sharma</h3>
+                    <!-- <span class="post">Faculty Incharge</span> -->
+                    <p> </p>
+                    <br>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<br>
+<br>
+<br>
+
+<div class ="container" style="color: black; margin-top: 50px;">
+        <div class="row d-flex justify-content-center">
+            <div class="col">
+                <p style="text-align: center; justify-content: center; display: flex; font-family: 'Luckiest Guy', cursive; font-size: 40px;"> PROJECT ADMINS </p>
+            </div>
+        </div>
+    </div>
+
+<div class="container" style="font-family: 'Neuton', serif;">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-3 col-sm-4">
+            <div class="our-team">
+                <img src="images/raksha_website.jpg" alt="">
+                <ul class="social">
+                    <!-- <li><a href="#" class="fa fa-facebook"></a></li> -->
+
+
+
+                    <li><a href="https://www.instagram.com/raksha___jain" class="fa fa-instagram"></a></li>
+                    <li><a href="https://github.com/raksha009/" class="fa fa-github"></a></li>
+                    <li><a href="https://www.linkedin.com/in/raksha--jain" class="fa fa-linkedin"></a></li>
+                    <p> </p>
+                    
+                    <!-- <li><a href="#" class="fa fa-twitter"></a></li> -->
+                </ul>
+                <div class="team-content">
+                    <h3 class="title">Raksha Jain</h3>
+                    <!-- <span class="post">Project Admin</span> -->
+                    <p> </p>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-4">
+            <div class="our-team">
+                <img src="images/shahina_website.jpg" alt="">
+                <ul class="social">
+                    <!-- <li><a href="#" class="fa fa-facebook"></a></li> -->
+                    <li><a href="https://www.instagram.com/_shines_5/" class="fa fa-instagram"></a></li>
+                    <li><a href="https://github.com/shahina-bano" class="fa fa-github"></a></li>
+                    <li><a href="https://www.linkedin.com/in/shahina-bano-704970192/" class="fa fa-linkedin"></a></li>
+                    <p> </p>
+                    
+                    <!-- <li><a href="#" class="fa fa-twitter"></a></li> -->
+                </ul>
+                <div class="team-content">
+                    <h3 class="title" >Shahina Bano</h3>
+                    <!-- <span class="post">Project Admin</span> -->
+                   
+                    <p> </p>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-4">
+            <div class="our-team">
+                <img src="images/yashmita_website.jpg" alt="">
+                <ul class="social">
+                    <!-- <li><a href="#" class="fa fa-facebook"></a></li> -->
+                    <li><a href="https://www.instagram.com/yashmita02" class="fa fa-instagram"></a></li>
+                    <li><a href="https://github.com/yashmita" class="fa fa-github"></a></li>
+                    <li><a href="https://www.linkedin.com/in/yashmita-balotiya/" class="fa fa-linkedin"></a></li>
+                    <p> </p>
+                    <!-- <li><a href="#" class="fa fa-twitter"></a></li> -->
+                </ul>
+                <div class="team-content">
+                    <h3 class="title">Yashmita</h3>
+                    <!-- <span class="post">Project Admin</span> -->
+                    <p> </p>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<br>
+<br>
+
+
+<!-- ||||||||||||||||||||||||||||||||| footer|||||||||||||||||||||||||||||||||||||-->
+   <footer>
+    <svg viewBox="0 0 120 20">
+     <defs> 
+       <mask id="xxx">
+         <circle cx="7" cy="12" r="40" fill="#fff" />
+       </mask>
+       
+       <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="
+               1 0 0 0 0  
+               0 1 0 0 0  
+               0 0 1 0 0  
+               0 0 0 13 -9" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+         <path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+      </defs> 
+    
+       <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2" ></use> 
+       <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0" ></use>
+        
+      </g>
+      <g class="gooeff">
+      <circle class="drop drop1" cx="20" cy="2" r="1.8"  />
+      <circle class="drop drop2" cx="25" cy="2.5" r="1.5"  />
+      <circle class="drop drop3" cx="16" cy="2.8" r="1.2"  />
+        <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+    
+    </svg>
+    
+      <div class="cont" >Copyright <a href="#" style="color: antiquewhite;"> <i class="far fa-copyright"></i></a> 2021 NoteBoat. All rights reserved. <br>
+          An initiatove by IGDTUW students. <br> <br>
+          <span class="icons">
+            
+            
+           <a href="mailto: noteboat52@gmail.com" style="color: antiquewhite;"> <i class="fas fa-envelope" style="margin-right: 20px; text-decoration: none;"></i></a>
+           <a href="https://goo.gl/maps/xPLYAZqJnNJKdfAr6" style="color: antiquewhite;"> <i class="fas fa-map-marker-alt" style="margin-right: 20px; text-decoration: none;"></i> </a>
+           
+                   
+        </span>
+      </div> 
+    </footer>
+
+   <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
+    <script src="https://use.fontawesome.com/d2bb98fb71.js"></script>
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script> -->
+</body>
+</html>

@@ -224,8 +224,12 @@ svg {
     size: 50px;
 }
 
-.icon1:hover, .icon2:hover{
-    opacity: .5;
+.fa-envelope:hover{ 
+    color: #a2a3a7;
+}
+
+.fa-map-marker-alt:hover{
+    color: red;
 }
 
 @keyframes drop {

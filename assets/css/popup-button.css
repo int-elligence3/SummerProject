@@ -211,6 +211,10 @@ transform: translateY(100px) scale(0.4);
   cursor: pointer;
 }
 
+.fa-google:hover, .fa-linkedin:hover, .fa-github:hover {
+  background: #9e5454;
+}
+
 .scroll-down {
   position: fixed;
   top: 50%;

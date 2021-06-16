@@ -226,6 +226,14 @@ svg {
     size: 50px;
 }
 
+.fa-envelope:hover{
+    color: #8283a7;
+} 
+
+.fa-map-marker-alt:hover{
+    color: red;
+}
+
 @keyframes drop {
   0% {
     transform: translateY(80%); 

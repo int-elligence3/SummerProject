@@ -13,6 +13,16 @@ body {
   box-sizing: border-box;
 }
 
+#contacttext{
+  padding-top: 110px;
+  text-align: center;
+  /*font-family: cursive;*/
+  font-family: 'Dela Gothic One', cursive;
+  /*font-weight: 1000;*/
+  font-size: 60px;
+  
+}
+
 
 header {
   position: fixed;

@@ -15,15 +15,7 @@ body {
   box-sizing: border-box;
 }
 
-#contacttext{
-  padding-top: 110px;
-  text-align: center;
-  /*font-family: cursive;*/
-  font-family: 'Dela Gothic One', cursive;
-  /*font-weight: 1000;*/
-  font-size: 60px;
-  
-}
+
 
 
 header {
@@ -42,6 +34,16 @@ header {
 }
 
 /* -------------------navbar end----------------------- */
+
+#contacttext{
+  padding-top: 100px;
+  text-align: center;
+  /*font-family: cursive;*/
+  font-family: 'Dela Gothic One', cursive;
+  /*font-weight: 1000;*/
+  font-size: 50px;
+  
+}
 
 div, textarea, input {
   -moz-box-sizing: border-box;

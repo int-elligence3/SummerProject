@@ -72,6 +72,6 @@ function getInputVal(id) {
 //     });
 // }
 
-document.getElementById("contactform").onsubmit = function(){
-    location.reload(true);
-}
+// document.getElementById("contactform").onsubmit = function(){
+//     location.reload(true);
+// }

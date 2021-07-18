@@ -79,7 +79,44 @@ function LoginUser(){
   });
 }
 
+var githubProvider = new firebase.auth.GithubAuthProvider();
+var github = 0;
+function signInGitHub(){
+  firebase.auth().signInWithPopup(githubProvider).then(res=>{
+    let token = res.credential.accessToken;
+    let user = res.user;
+    localStorage.setItem("userLogin", "true");
+    alert("Login successful");
+    window.location.replace("index.html");
+    console.log(user);
+    github = 1;
+  }).catch(e=>{
+    console.log(e.message);
+  });
+}
+
+// check state
+firebase.auth().onAuthStateChanged(function(user){
+  if(user){
+    console.log(user);
+  }else{
+
+  }
+});
+
 function logOut(){
+  if(github === 1){
+    firebase.auth().signOut().then(()=>{
+      alert('User logged out successfully')
+    }).catch(e=>{
+      console.log(e.message);
+    })
+  }
   localStorage.removeItem("userLogin");
   window.location.replace("index.html"); 
 }
+
+// function logOut(){
+//   localStorage.removeItem("userLogin");
+//   window.location.replace("index.html"); 
+// }

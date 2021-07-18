@@ -49,7 +49,7 @@ var firebaseConfig = {
   
   function GoogleLogin(){
     console.log('login')
-    firebase.auth().signInWithPopUp(googleprovider).then(res =>{
+    firebase.auth().signInWithPopup(googleprovider).then(res =>{
       console.log(res)
     }).catch(e =>{
       console.log(e)

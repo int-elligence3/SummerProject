@@ -42,19 +42,6 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
-  
-// Google Login
-  document.getElementById("googlelogin").addEventListener('click', GoogleLogin);
-  let googleprovider = new firebase.auth.GoogleAuthProvider()
-  
-  function GoogleLogin(){
-    console.log('login')
-    firebase.auth().signInWithPopup(googleprovider).then(res =>{
-      console.log(res)
-    }).catch(e =>{
-      console.log(e)
-    })
-  }
 
 function RegisterUser(){
     var email = document.getElementById('email').value;
@@ -78,6 +65,25 @@ function LoginUser(){
       alert(error.message);
   });
 }
+
+// Google Login
+  document.getElementById("googlelogin").addEventListener('click', GoogleLogin);
+  let googleprovider = new firebase.auth.GoogleAuthProvider()
+  let googlelogin = 0;
+  
+  function GoogleLogin(){
+    console.log('login')
+    firebase.auth().signInWithPopup(googleprovider).then(res =>{
+//       console.log(res)
+      googlelogin = 1;
+      localStorage.setItem("userLogin", "true");
+      alert("Login successful");
+      window.location.replace("index.html");
+    }).catch(e =>{
+      console.log(e)
+    })
+  }
+
 
 var githubProvider = new firebase.auth.GithubAuthProvider();
 var github = 0;
@@ -105,7 +111,7 @@ firebase.auth().onAuthStateChanged(function(user){
 });
 
 function logOut(){
-  if(github === 1){
+  if(github === 1 || googlelogin == 1){
     firebase.auth().signOut().then(()=>{
       alert('User logged out successfully')
     }).catch(e=>{

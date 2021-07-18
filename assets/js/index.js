@@ -25,9 +25,9 @@ function openform() {
   const body = document.querySelector("body");
   const modal = document.querySelector(".modal");
 
+  
 
 //   firebase
-
 var firebaseConfig = {
     apiKey: "AIzaSyD5PRI0eqBYwuXQPtd1RRKHNuAWcw8PYnI",
     authDomain: "contactform-e7f07.firebaseapp.com",
@@ -41,6 +41,20 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+
+  
+// Google Login
+  document.getElementById("googlelogin").addEventListener('click', GoogleLogin);
+  let googleprovider = new firebase.auth.GoogleAuthProvider()
+  
+  function GoogleLogin(){
+    console.log('login')
+    firebase.auth().signInWithPopUp(googleprovider).then(res =>{
+      console.log(res)
+    }).catch(e =>{
+      console.log(e)
+    })
+  }
 
 function RegisterUser(){
     var email = document.getElementById('email').value;

@@ -1,0 +1,111 @@
+
+body {
+    font-family: Lato, sans-serif;
+  }
+  
+  html{
+    overflow-x: hidden;
+  }
+  footer {
+    width:100vw;
+    position:relative;
+    bottom:0px;
+    /* margin-left: -120%; */
+    /* margin-right: -120%; */
+    /* left: 0px; */
+    /* margin-left: -120px; */
+    
+  }
+  footer div {
+    background-color:#4478e3;
+    margin: -5px 0px 0px 0px;
+    padding:0px;
+    color: #fff;
+    text-align:center;
+  }
+  svg {
+    width:100%;
+  }
+  
+  .wave {
+    animation: wave 3s linear;
+    animation-iteration-count:infinite;
+    fill: #4478e3;
+  }
+  .drop {
+    fill: transparent;
+    animation: drop 5s ease infinite normal;
+    stroke: #4478e3;
+    stroke-width:0.5;
+    opacity:.6; 
+    transform: translateY(80%);
+  }
+  .drop1 {
+    transform-origin: 20px 5px;
+  }
+  .drop2 {
+    animation-delay: 3s;
+    animation-duration:3s;
+    transform-origin: 25px 5px;
+  }
+  .drop3 {
+    animation-delay: -2s;
+    animation-duration:3.4s;
+    transform-origin: 16px 5px;
+  }
+  .gooeff {
+        filter: url(#goo);
+  }
+  #wave2 {
+    animation-duration:5s;
+    animation-direction: reverse;
+    opacity: .6
+  }
+  #wave3 {
+    animation-duration: 7s;
+    opacity:.3;
+  }
+  .cont{
+    display: block;
+    font-size: larger;
+    padding-bottom: 20px;
+  }
+  
+  .icons{
+  font-size: x-large;
+  color: black;
+  size: 50px;
+  }
+  
+  .fa-envelope:hover{
+      color: #8283a7;
+  } 
+  
+  
+  .fa-map-marker-alt:hover{
+      /*opacity: 0.5;*/
+      color: red;
+  }
+  
+  @keyframes drop {
+    0% {
+      transform: translateY(80%); 
+      opacity:.6; 
+    }
+    80% {
+      transform: translateY(80%); 
+      opacity:.6; 
+    }
+    90% { 
+      transform: translateY(10%) ; 
+      opacity:.6; 
+    }
+    100% { 
+      transform: translateY(0%) scale(1.5);
+      stroke-width:0.2;
+      opacity:0; 
+    }
+  }
+  @keyframes wave {
+    to {transform: translateX(-100%);}
+  }

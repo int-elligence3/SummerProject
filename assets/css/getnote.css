@@ -1,7 +1,10 @@
+ *{
+  box-sizing: border-box;
+}
 
-  
 body {
     font-family: Lato, sans-serif;
+    background-size: cover;
   }
   
   html{
@@ -11,10 +14,6 @@ body {
     width:100vw;
     position:relative;
     bottom:0px;
-    /* margin-left: -120%; */
-    /* margin-right: -120%; */
-    /* left: 0px; */
-    /* margin-left: -120px; */
     
   }
   footer div {
@@ -193,6 +192,3 @@ body {
     display: inline-flex;
     position: relative;
   }
-
-  /* //////////////////////cards//////////////////////////////////// */
-  

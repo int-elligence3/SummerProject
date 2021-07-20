@@ -1,4 +1,6 @@
-
+function getnotes() {
+      window.location.replace("assets/getnote.html");
+}
 
 function openform() {
     if(localStorage.getItem("userLogin") == null){

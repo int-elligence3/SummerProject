@@ -1,131 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Upload Notes | NoteBoat</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="shortcut icon" href="images/favicon1-removebg.png" type="image/x-icon">
-  <link rel="stylesheet" href="css/upload.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Upload Notes | NoteBoat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/favicon1-removebg.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/upload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
+
 <body>
 
 
     <!-----------------nav bar---------->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top pr-0 py-0">
-    <!-- <a class="navbar-brand" href="#">BookNotes</a> -->
-    <a href="index.html"><img src="images/text4.png"> </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
-      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <!-- <a class="navbar-brand" href="#">BookNotes</a> -->
+        <a href="../index.html"><img src="images/text4.png"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarContent" style="color:white;">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="about.html" style="color:white;"> ABOUT US</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="teampage.html" style="color:white;"> OUR TEAM </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="contact.html" style="color:white;">CONTACT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" id="profile" onclick="logOut()" href="#" style="color:white;">LOG OUT</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+        <div class="collapse navbar-collapse" id="navbarContent" style="color:white;">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link mx-2" href="about.html" style="color:white;"> ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-2" href="teampage.html" style="color:white;"> OUR TEAM </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-2" href="contact.html" style="color:white;">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-2" id="profile" onclick="logOut()" href="#" style="color:white;">LOG OUT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
 
     <!-- <button>Upload files</button> -->
-    <div style="margin-top: 10px;">
-        <h1>hello world</h1>
-        <h1>this is the hardwork of 2 month</h1>
-        <h1>i hope it will bring a change in my life</h1>
-        <h1>i m scared now</h1>
+    <div class="content">
+        <div class="headline">
+            <h1>Upload Notes here!</h1>
+        </div>
+
+        <!-- Upload Button -->
+        <div class="frame">
+            <input type="file" id="fileButton" name="fileButton" multiple="">
+            <button class="custom-btn btn-12" id="upload"><span>Click!</span><span>Upload Notes</span></button>
+
+        </div>
     </div>
-    <div>
-        <h1>is this the end</h1>
-    </div>
-    <p>vhvhvjvhv</p>
-    
 
+    <!-- ||||||||||||||||||||||||||||||||| footer|||||||||||||||||||||||||||||||||||||-->
+    <footer>
+        <svg viewBox="0 0 120 20">
+            <defs>
+                <mask id="xxx">
+                    <circle cx="7" cy="12" r="40" fill="#fff" />
+                </mask>
 
-
-    <!-- Upload Button -->
-  <div class="frame">
-    <button class="custom-btn btn-12"><span>Click!</span><span>Upload Notes</span></button>
-  </div>
-
-
-      <!-- ||||||||||||||||||||||||||||||||| footer|||||||||||||||||||||||||||||||||||||-->
-  <footer>
-    <svg viewBox="0 0 120 20">
-      <defs>
-        <mask id="xxx">
-          <circle cx="7" cy="12" r="40" fill="#fff" />
-        </mask>
-
-        <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
-          <feColorMatrix in="blur" mode="matrix" values="
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="
                1 0 0 0 0  
                0 1 0 0 0  
                0 0 1 0 0  
                0 0 0 13 -9" result="goo" />
-          <feBlend in="SourceGraphic" in2="goo" />
-        </filter>
-        <path id="wave"
-          d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
-      </defs>
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+                <path id="wave"
+                    d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+            </defs>
 
-      <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2"></use>
-      <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0"></use>
-
-    
-      <g class="gooeff">
-        <circle class="drop drop1" cx="20" cy="2" r="1.8" />
-        <circle class="drop drop2" cx="25" cy="2.5" r="1.5" />
-        <circle class="drop drop3" cx="16" cy="2.8" r="1.2" />
-        <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
-
-    </svg>
-
-    <div class="cont">Copyright <i class="far fa-copyright"></i> 2021
-      NoteBoat. All rights reserved. <br>
-      An initiative by IGDTUW students. <br>
-      <span class="icons">
+            <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2"></use>
+            <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0"></use>
 
 
-        <a href="mailto: noteboat52@gmail.com" style="color: antiquewhite;"> <i class="fas fa-envelope"
-            style="margin-right: 20px; text-decoration: none;"></i></a>
-        <a href="https://goo.gl/maps/xPLYAZqJnNJKdfAr6" style="color: antiquewhite;"> <i class="fas fa-map-marker-alt"
-            style="margin-right: 20px; text-decoration: none;"></i> </a>
+            <g class="gooeff">
+                <circle class="drop drop1" cx="20" cy="2" r="1.8" />
+                <circle class="drop drop2" cx="25" cy="2.5" r="1.5" />
+                <circle class="drop drop3" cx="16" cy="2.8" r="1.2" />
+                <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+
+        </svg>
+
+        <div class="cont">Copyright <i class="far fa-copyright"></i> 2021
+            NoteBoat. All rights reserved. <br>
+            An initiative by IGDTUW students. <br>
+            <span class="icons">
 
 
-      </span>
-    </div>
-  </footer>
-  
-  <script src="js/index.js"></script>
-  <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
-      integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
-      crossorigin="anonymous"
-    ></script>
-  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <a href="mailto: noteboat52@gmail.com" style="color: antiquewhite;"> <i class="fas fa-envelope"
+                        style="margin-right: 20px; text-decoration: none;"></i></a>
+                <a href="https://goo.gl/maps/xPLYAZqJnNJKdfAr6" style="color: antiquewhite;"> <i
+                        class="fas fa-map-marker-alt" style="margin-right: 20px; text-decoration: none;"></i> </a>
 
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-    crossorigin="anonymous"></script>
-  <script src="https://use.fontawesome.com/d2bb98fb71.js"></script>
+
+            </span>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/upload.js"></script>
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+        integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/d2bb98fb71.js"></script>
 </body>
+
 </html>

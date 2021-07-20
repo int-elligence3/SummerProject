@@ -207,3 +207,20 @@ size: 50px;
   display: inline-flex;
   position: relative;
 }
+
+#myBtn{
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    z-index: 99;
+    border: none;
+    color: #fff;
+    background: #00abff;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  #myBtn:hover{
+    background: #606060;
+  
+  }

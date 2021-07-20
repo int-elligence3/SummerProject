@@ -1,3 +1,9 @@
+
+document.body.style.backgroundImage = "url('images/bgcontact.jpg')";
+document.body.style.backgroundRepeat = "no-repeat";
+document.body.style.backgroundSize = "cover";
+
+
 const database = firebase.database();
 
 const submit = document.getElementById('submit');

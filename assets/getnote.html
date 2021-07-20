@@ -1080,6 +1080,13 @@
             </span>
         </div>
     </footer>
+
+    <!-- Arrow up -->
+    <div class="scrolltop float-right">
+        <i class="fa fa-arrow-up" onclick="topFunction()" id="myBtn"></i>
+        
+    </div>
+
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -1097,5 +1104,35 @@
 
     <script src="js/firebase.js"></script>
     <script src="js/logout.js"></script>
+
+
+    <!-- JS for Arrow up -->
+
+    <script>
+  	
+        //get the button
+        mybutton = document.getElementById("myBtn");
+  
+        //when the user scrolls down 20px from the top of the webpage, show the button
+        window.onscroll = function() {scrollfunction()};
+  
+        function scrollfunction() {
+            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                mybutton.style.display = "block";
+            }
+            else{
+                mybutton.style.display = "none";
+            }
+        }
+  
+        //when the user clicks on the button, scroll to the top of the webpage
+  
+        function topFunction() {
+            document.body.scrollTop = 0; //for safari
+            document.documentElement.scrollTop = 0; //for chrome, firefox, IE and opera
+        }
+  
+    </script>
+
 </body>
 </html>

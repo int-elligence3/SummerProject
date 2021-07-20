@@ -1,9 +1,4 @@
-if(localStorage.getItem("userLogin") == null){
-  document.getElementById("profile").style.display = "none";
-}
-else{
-  document.getElementById("profile").style.display = "block";
-}
+
 
 function openform() {
     if(localStorage.getItem("userLogin") == null){
@@ -25,24 +20,7 @@ function openform() {
   const body = document.querySelector("body");
   const modal = document.querySelector(".modal");
 
-  
-
-//   firebase
-var firebaseConfig = {
-    apiKey: "AIzaSyD5PRI0eqBYwuXQPtd1RRKHNuAWcw8PYnI",
-    authDomain: "contactform-e7f07.firebaseapp.com",
-    databaseURL: "https://contactform-e7f07-default-rtdb.firebaseio.com",
-    projectId: "contactform-e7f07",
-    storageBucket: "contactform-e7f07.appspot.com",
-    messagingSenderId: "71270380712",
-    appId: "1:71270380712:web:ca0b04c1788ea74818fe9d",
-    measurementId: "G-78Y0T1BYTV"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-
-
+ 
 function RegisterUser(){
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
@@ -69,7 +47,7 @@ function LoginUser(){
 // Google Login
   document.getElementById("googlelogin").addEventListener('click', GoogleLogin);
   let googleprovider = new firebase.auth.GoogleAuthProvider()
-  let googlelogin = 0;
+  
   
   function GoogleLogin(){
     console.log('login')
@@ -86,7 +64,7 @@ function LoginUser(){
 
 
 var githubProvider = new firebase.auth.GithubAuthProvider();
-var github = 0;
+
 function signInGitHub(){
   firebase.auth().signInWithPopup(githubProvider).then(res=>{
     let token = res.credential.accessToken;
@@ -105,8 +83,6 @@ function signInGitHub(){
 firebase.auth().onAuthStateChanged(function(user){
   if(user){
     console.log(user);
-  }else{
-
   }
 });
 
@@ -122,7 +98,5 @@ function logOut(){
   window.location.replace("index.html"); 
 }
 
-// function logOut(){
-//   localStorage.removeItem("userLogin");
-//   window.location.replace("index.html"); 
-// }
+
+

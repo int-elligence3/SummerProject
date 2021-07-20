@@ -1,35 +1,3 @@
-// document.getElementById('contactform').addEventListener('submit', sumbitform);
-
-// // var messageref = firebase.database().ref('message');
-// const database = firebase.database();
-
-// function sumbitform(e){
-//     e.preventDefault();
-//     var first = getInputVal('first');
-//     var last = getInputVal('last');
-//     var email = getInputVal('email');
-//     var message = getInputVal('message');
-//     // var first = getInputVal('first');
-//     // console.log(first);
-
-//     savemessage(first, last, email, message);
-
-// }
-
-// function getInputVal(id){
-//     return document.getElementById(id).value;
-// }
-
-// function savemessage(first, last, email, message){
-//     var newmessageref = messageref.push();
-//     newmessageref.set({
-//         first: first,
-//         last: last,
-//         email: email,
-//         message: message
-
-//     });
-// }
 const database = firebase.database();
 
 const submit = document.getElementById('submit');
@@ -61,17 +29,14 @@ function getInputVal(id) {
     return document.getElementById(id).value;
 }
 
-// function savemessage(first, last, email, message) {
-//     var newmessageref = messageref.push();
-//     newmessageref.set({
-//         first: first,
-//         last: last,
-//         email: email,
-//         message: message
-
-//     });
-// }
-
-// document.getElementById("contactform").onsubmit = function(){
-//     location.reload(true);
-// }
+function logOut(){
+	if(github === 1 || googlelogin == 1){
+	  firebase.auth().signOut().then(()=>{
+		alert('User logged out successfully')
+	  }).catch(e=>{
+		console.log(e.message);
+	  })
+	}
+	localStorage.removeItem("userLogin");
+	window.location.replace("../index.html"); 
+  }

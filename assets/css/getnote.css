@@ -9,6 +9,7 @@ body {
   
   html{
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
   footer {
     width:100vw;
@@ -191,4 +192,22 @@ body {
     align-items: center;
     display: inline-flex;
     position: relative;
+  }
+
+
+  #myBtn{
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    z-index: 99;
+    border: none;
+    color: #fff;
+    background: #00abff;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  #myBtn:hover{
+    background: #606060;
+  
   }

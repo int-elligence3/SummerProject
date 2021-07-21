@@ -1,88 +1,89 @@
- @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
 
- *{
-  box-sizing: border-box;
-  border: none;
+*{
+ box-sizing: border-box;
+ border: none;
 }
 
 body {
-  font-family: Lato, sans-serif;
-  background-size: cover;
+ font-family: Lato, sans-serif;
+ background-size: cover;
 }
 
 html{
-  overflow-x: hidden;
+ overflow-x: hidden;
+ scroll-behavior: smooth;
 }
 
 img{
-  text-align: left;
-  padding-right: 1rem;
-  padding-top: 1rem;
+ text-align: left;
+ padding-right: 1rem;
+ padding-top: 1rem;
 
 }
 
 
 /* Footer */
 footer {
-  width:100vw;
-  position:relative;
-  bottom:0px;
-  
+ width:100vw;
+ position:relative;
+ bottom:0px;
+ 
 }
 
 footer div {
-  background-color:#4478e3;
-  margin: -5px 0px 0px 0px;
-  padding:0px;
-  color: #fff;
-  text-align:center;
+ background-color:#4478e3;
+ margin: -5px 0px 0px 0px;
+ padding:0px;
+ color: #fff;
+ text-align:center;
 }
 svg {
-  width:100%;
+ width:100%;
 }
 
 .wave {
-  animation: wave 3s linear;
-  animation-iteration-count:infinite;
-  fill: #4478e3;
+ animation: wave 3s linear;
+ animation-iteration-count:infinite;
+ fill: #4478e3;
 }
 .drop {
-  fill: transparent;
-  animation: drop 5s ease infinite normal;
-  stroke: #4478e3;
-  stroke-width:0.5;
-  opacity:.6; 
-  transform: translateY(80%);
+ fill: transparent;
+ animation: drop 5s ease infinite normal;
+ stroke: #4478e3;
+ stroke-width:0.5;
+ opacity:.6; 
+ transform: translateY(80%);
 }
 .drop1 {
-  transform-origin: 20px 5px;
+ transform-origin: 20px 5px;
 }
 .drop2 {
-  animation-delay: 3s;
-  animation-duration:3s;
-  transform-origin: 25px 5px;
+ animation-delay: 3s;
+ animation-duration:3s;
+ transform-origin: 25px 5px;
 }
 .drop3 {
-  animation-delay: -2s;
-  animation-duration:3.4s;
-  transform-origin: 16px 5px;
+ animation-delay: -2s;
+ animation-duration:3.4s;
+ transform-origin: 16px 5px;
 }
 .gooeff {
-      filter: url(#goo);
+     filter: url(#goo);
 }
 #wave2 {
-  animation-duration:5s;
-  animation-direction: reverse;
-  opacity: .6
+ animation-duration:5s;
+ animation-direction: reverse;
+ opacity: .6
 }
 #wave3 {
-  animation-duration: 7s;
-  opacity:.3;
+ animation-duration: 7s;
+ opacity:.3;
 }
 .cont{
-  display: block;
-  font-size: larger;
-  padding-bottom: 20px;
+ display: block;
+ font-size: larger;
+ padding-bottom: 20px;
 }
 
 .icons{
@@ -92,135 +93,134 @@ size: 50px;
 }
 
 .fa-envelope:hover{
-    color: #8283a7;
+   color: #8283a7;
 } 
 
 
 .fa-map-marker-alt:hover{
-    /*opacity: 0.5;*/
-    color: red;
+   /*opacity: 0.5;*/
+   color: red;
 }
 
 @keyframes drop {
-  0% {
-    transform: translateY(80%); 
-    opacity:.6; 
-  }
-  80% {
-    transform: translateY(80%); 
-    opacity:.6; 
-  }
-  90% { 
-    transform: translateY(10%) ; 
-    opacity:.6; 
-  }
-  100% { 
-    transform: translateY(0%) scale(1.5);
-    stroke-width:0.2;
-    opacity:0; 
-  }
+ 0% {
+   transform: translateY(80%); 
+   opacity:.6; 
+ }
+ 80% {
+   transform: translateY(80%); 
+   opacity:.6; 
+ }
+ 90% { 
+   transform: translateY(10%) ; 
+   opacity:.6; 
+ }
+ 100% { 
+   transform: translateY(0%) scale(1.5);
+   stroke-width:0.2;
+   opacity:0; 
+ }
 }
 @keyframes wave {
-  to {transform: translateX(-100%);}
+ to {transform: translateX(-100%);}
 }
 
 
 
-  /*3d Buttons */
+ /*3d Buttons */
 
 .btn-3d-1{
-  position: relative;
-  background: orangered;
-  color: white;
-  border: none;
-  padding: 15px 24px;
-  font-size: 1.4rem;
-  box-shadow: -6px 6px 0 hsl(16, 100%, 30%);
-  outline: none;   
+ position: relative;
+ background: orangered;
+ color: white;
+ border: none;
+ padding: 15px 24px;
+ font-size: 1.4rem;
+ box-shadow: -6px 6px 0 hsl(16, 100%, 30%);
+ outline: none;   
 }
 
 .btn-3d-1:hover {
-  background: hsl(16, 100%, 45%);
+ background: hsl(16, 100%, 45%);
 }
 
 .btn-3d-1:active {
-  background: hsl(16, 100%, 40%);
-  top: 3px;
-  left: -3px;
-  box-shadow: -3px 3px 0 hsl(16, 100%, 30%);
+ background: hsl(16, 100%, 40%);
+ top: 3px;
+ left: -3px;
+ box-shadow: -3px 3px 0 hsl(16, 100%, 30%);
 }
 
 .btn-3d-1::before {
-  position: absolute;
-  display: block;
-  content: "";
-  height: 0;
-  width: 0;
-  
-  border: solid 6px transparent;
-  border-right: solid 6px hsl(16, 100%, 30%);
-  border-left-width: 0;
-  background: none;
-  top: 0;
-  left: -6px; 
+ position: absolute;
+ display: block;
+ content: "";
+ height: 0;
+ width: 0;
+ 
+ border: solid 6px transparent;
+ border-right: solid 6px hsl(16, 100%, 30%);
+ border-left-width: 0;
+ background: none;
+ top: 0;
+ left: -6px; 
 }
 
 .btn-3d-1::after {
-  position: absolute;
-  display: block;
-  content: "";
-  height: 0;
-  width: 0;
-  
-  border: solid 6px transparent;
-  border-top: solid 6px hsl(16, 100%, 30%);
-  border-bottom-width: 0;
-  background: none;
-  right: 0;
-  bottom: -6px;
+ position: absolute;
+ display: block;
+ content: "";
+ height: 0;
+ width: 0;
+ 
+ border: solid 6px transparent;
+ border-top: solid 6px hsl(16, 100%, 30%);
+ border-bottom-width: 0;
+ background: none;
+ right: 0;
+ bottom: -6px;
 }
 
 .btn-3d-1:active::before{
-  border: solid 3px transparent;
-  border-right: solid 3px hsl(16, 100%, 30%);
-  border-left-width: 0;
-  left: -3px; 
+ border: solid 3px transparent;
+ border-right: solid 3px hsl(16, 100%, 30%);
+ border-left-width: 0;
+ left: -3px; 
 }
 
 .btn-3d-1:active::after{
-  border: solid 3px transparent;
-  border-top: solid 3px hsl(16, 100%, 30%);
-  border-bottom-width: 0;
-  bottom: -3px; 
+ border: solid 3px transparent;
+ border-top: solid 3px hsl(16, 100%, 30%);
+ border-bottom-width: 0;
+ bottom: -3px; 
 }
 
-.button {
-  width: 100%;
+/* .button {
+ width: 100%;
 }
 .box3d {
-  /* float:left; */
-  
-  height: 50px;
-  width: 24%;
-  justify-content: center;
-  align-items: center;
-  display: inline-flex;
-  position: relative;
-}
+ 
+ height: 50px;
+ width: 24%;
+ justify-content: center;
+ align-items: center;
+ display: inline-flex;
+ position: relative;
+} */
 
 #myBtn{
-    position: fixed;
-    bottom: 20px;
-    right: 40px;
-    z-index: 99;
-    border: none;
-    color: #fff;
-    background: #00abff;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  
-  #myBtn:hover{
-    background: #606060;
-  
-  }
+   position: fixed;
+   bottom: 20px;
+   right: 40px;
+   z-index: 99;
+   border: none;
+   color: #fff;
+   background: #00abff;
+   padding: 10px;
+   border-radius: 10px;
+ }
+ 
+ #myBtn:hover{
+   background: #606060;
+ 
+ }

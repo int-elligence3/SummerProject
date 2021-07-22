@@ -25,7 +25,11 @@ submit.addEventListener('click', (e) => {
 
     });
 
-    alert('Your data has been sumbitted. Please referesh the page to continue!');
+    alert('Your data has been sumbitted');
+    document.getElementById('first').value = "";
+    document.getElementById('last').value = "";
+    document.getElementById('email').value = "";
+    document.getElementById('message').value = "";
 
     // return true;
 

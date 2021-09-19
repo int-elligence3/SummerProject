@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>NoteBoat</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="shortcut icon" href="assets/images/favicon1-removebg.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/index.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="assets/css/popup-button.css">
+
+</head>
+
+<body>
+
+
+  <video playsinline autoplay muted loop>
+    <source src="assets/images/LandingPageVideo.mp4" type="video/mp4">
+  </video>
+
+
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top pr-0 py-0">
+    <!-- <a class="navbar-brand" href="#">BookNotes</a> -->
+    <a href="index.html"><img src="assets/images/text4.png"> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent" style="color:white;">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="assets/about.html" style="color:white;"> ABOUT US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="assets/teampage.html" style="color:white;"> OUR TEAM </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="assets/contact.html" style="color:white;">CONTACT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" id="profile" onclick="logOut()" href="#" style="color:white;">LOG OUT</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="outer button getnote">
+          <button onclick = "getnotes()">Get Resources</button>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-md-6">
+        <div class="outer button putnote">
+          <button onclick="openform()">UPLOAD NOTES</button>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- POPUP -->
+
+  <!-- button ---------------------------------------------------->
+  <div class="container1" id="opennn"></div>
+
+  <!-- REGISTER -->
+
+  <div class="modal" id="form-open" style="z-index: -2">
+    <div class="modal-container">
+      <div class="modal-left">
+        <h1 class="modal-title">Register Now!</h1>
+        <p class="modal-desc">SIGN UP</p>
+        <div class="input-block">
+          <label for="email" class="input-label"><b>Email</b></label>
+          <input type="email" name="email" id="email" placeholder="Email">
+        </div>
+        <div class="input-block">
+          <label for="password" class="input-label"><b>Set Password</b></label>
+          <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+
+        <div class="modal-buttons">
+          <button type="submit" onclick="RegisterUser()" class="input-button">Register</button>
+          <button type="submit" onclick="LoginUser()" class="input-button">Login</button>
+        </div>
+
+        <span class="modal-desc" style="text-align: center;">
+          <p>OR</p>
+          <p>SIGN IN WITH</p>
+          <div class="icons">
+            <a href="#" id = "googlelogin" class="fa fa-google" style="margin-right: 20px;"></a>
+<!--             <a href="#" class="fa fa-linkedin" style="margin-right: 20px;"></a> -->
+            <a href="#" onclick="signInGitHub()" class="fa fa-github" style="margin-right: 20px;"></a>
+        </span>
+      </div>
+    </div>
+    <div class="modal-right">
+      <img src="assets/images/boat.png" alt="">
+    </div>
+    <button class="icon-button close-button" onclick="closeform()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+        <path
+          d="M 25 3 C 12.86158 3 3 12.86158 3 25 C 3 37.13842 12.86158 47 25 47 C 37.13842 47 47 37.13842 47 25 C 47 12.86158 37.13842 3 25 3 z M 25 5 C 36.05754 5 45 13.94246 45 25 C 45 36.05754 36.05754 45 25 45 C 13.94246 45 5 36.05754 5 25 C 5 13.94246 13.94246 5 25 5 z M 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.980469 15.990234 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 z">
+        </path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- button end ---->
+
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js"></script>
+
+  <script src="assets/js/firebase.js"></script>
+  <script src="assets/js/index.js"></script>
+
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/d2bb98fb71.js"></script>
+</body>
+
+</html>

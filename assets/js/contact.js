@@ -25,7 +25,7 @@ submit.addEventListener('click', (e) => {
 
     });
 
-    alert('Your data has been sumbitted');
+    alert('Thank you for your valuable feedback');
     document.getElementById('first').value = "";
     document.getElementById('last').value = "";
     document.getElementById('email').value = "";

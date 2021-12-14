@@ -9,8 +9,8 @@ const database = firebase.database();
 const submit = document.getElementById('submit');
 
 
-submit.addEventListener('submit', (e) => {
-    e.preventDefault();
+submit.addEventListener('click', (e) => {
+   // e.preventDefault();
     var newPostKey = firebase.database().ref().child('users').push().key;
     const contactform = getInputVal('contactform');
     const first = getInputVal('first');
@@ -26,10 +26,10 @@ submit.addEventListener('submit', (e) => {
     });
 
     alert('Thank you for your valuable feedback');
-    document.getElementById('first').value = "";
-    document.getElementById('last').value = "";
-    document.getElementById('email').value = "";
-    document.getElementById('message').value = "";
+    //document.getElementById('first').value = "";
+    //document.getElementById('last').value = "";
+    //document.getElementById('email').value = "";
+    //document.getElementById('message').value = "";
 
     // return true;
 

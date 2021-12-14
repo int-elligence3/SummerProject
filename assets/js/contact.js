@@ -9,7 +9,7 @@ const database = firebase.database();
 const submit = document.getElementById('submit');
 
 
-submit.addEventListener('click', (e) => {
+submit.addEventListener('submit', (e) => {
     e.preventDefault();
     var newPostKey = firebase.database().ref().child('users').push().key;
     const contactform = getInputVal('contactform');

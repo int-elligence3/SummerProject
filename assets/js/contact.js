@@ -5,18 +5,21 @@ document.body.style.backgroundSize = "cover";
 
 
 const database = firebase.database();
-
+const form = document.querySelector('form');
 const submit = document.getElementById('submit');
 
 
-submit.addEventListener('click', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
+
     var newPostKey = firebase.database().ref().child('users').push().key;
     const contactform = getInputVal('contactform');
     const first = getInputVal('first');
     const last = getInputVal('last');
     const email = getInputVal('email');
     const message = getInputVal('message');
+
+    
     database.ref('users/' + newPostKey).set({
         first: first,
         last: last,
@@ -24,14 +27,13 @@ submit.addEventListener('click', (e) => {
         message: message
 
     });
-
-    alert('Thank you for your valuable feedback');
+    alert('Your data has been sumbitted');
     document.getElementById('first').value = "";
     document.getElementById('last').value = "";
     document.getElementById('email').value = "";
     document.getElementById('message').value = "";
+    document.getElementById("contactform").submit();
 
-    // return true;
 
 });
 

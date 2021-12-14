@@ -26,10 +26,10 @@ submit.addEventListener('click', (e) => {
     });
 
     alert('Thank you for your valuable feedback');
-    document.getElementById('first').value = "";
-    document.getElementById('last').value = "";
-    document.getElementById('email').value = "";
-    document.getElementById('message').value = "";
+//     document.getElementById('first').value = "";
+//     document.getElementById('last').value = "";
+//     document.getElementById('email').value = "";
+//     document.getElementById('message').value = "";
 
     // return true;
 
